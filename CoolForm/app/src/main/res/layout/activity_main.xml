@@ -4,18 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.coolform.MainActivity">
+    tools:context="com.example.coolform.MainActivity"
+    android:background="#00837c">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Event"
-        android:id="@+id/button2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="AddEvent" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Upcoming Events"
+                    android:id="@+id/textView8"
+                    android:layout_weight="2"
+                    android:textColor="#ffffff"
+                    android:textSize="25dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:id="@+id/imageButton"
+                    android:onClick="AddEvent"
+                    android:src="@android:drawable/ic_menu_add"
+                    android:background="#00837c"
+                    android:layout_weight="2"
+                    android:scaleType="fitCenter"
+                    android:clickable="true"
+                    android:layout_gravity="right" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#dedede">
+
+            <CalendarView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/calendarView"
+
+                style="@android:style/Widget.Holo.CalendarView"
+                android:weekNumberColor="#ffffff"
+                android:focusedMonthDateColor="#00837c"
+                android:layout_margin="30dp"
+                android:unfocusedMonthDateColor="#ffffff"
+                android:selectedWeekBackgroundColor="#a3a3a3"
+                android:forceHasOverlappingRendering="false" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#dedede"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:touchscreenBlocksFocus="false">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 </RelativeLayout>
