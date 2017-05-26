@@ -36,16 +36,15 @@
                     android:textSize="25dp" />
 
                 <ImageButton
-                    android:layout_width="wrap_content"
+                    android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:id="@+id/imageButton"
                     android:onClick="AddEvent"
-                    android:src="@android:drawable/ic_menu_add"
+                    android:src="@drawable/addicon"
                     android:background="#00837c"
-                    android:layout_weight="2"
                     android:scaleType="fitCenter"
                     android:clickable="true"
-                    android:layout_gravity="right" />
+                    android:layout_gravity="center_vertical|right" />
 
             </LinearLayout>
         </LinearLayout>
@@ -55,6 +54,46 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#dedede">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#dedede"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:touchscreenBlocksFocus="false">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="Swap to View Events"
+                        android:id="@+id/textView15"
+                        android:textSize="20dp"
+                        android:textColor="#3b6991" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:id="@+id/imageView"
+                        android:src="@drawable/abab"
+                        android:layout_marginLeft="30dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ffffff"></LinearLayout>
 
             <CalendarView
                 android:layout_width="match_parent"
@@ -68,17 +107,6 @@
                 android:unfocusedMonthDateColor="#ffffff"
                 android:selectedWeekBackgroundColor="#a3a3a3"
                 android:forceHasOverlappingRendering="false" />
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#dedede"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:touchscreenBlocksFocus="false">
-
-            </LinearLayout>
 
         </LinearLayout>
 

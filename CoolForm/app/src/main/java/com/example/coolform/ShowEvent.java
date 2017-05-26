@@ -8,37 +8,35 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class ShowEvent extends AppCompatActivity {
 
     private GestureDetectorCompat gestureObject;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_showevent);
         gestureObject = new GestureDetectorCompat(this,new LearnGesture());
 
-    }
-
-
-
-    public void AddEvent(View view){
-        startActivity(new Intent(this,AddEvent.class));
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         this.gestureObject.onTouchEvent(event);
         return super.onTouchEvent(event);
+
+
+    }
+    public void showDetails(View view){
+        startActivity(new Intent(this,EventDetails.class));
     }
 
     class LearnGesture extends GestureDetector.SimpleOnGestureListener{
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
 
-            if(e1.getX()>e2.getX()){
-                startActivity(new Intent(MainActivity.this,ShowEvent.class));
+            if(e1.getX()<e2.getX()){
+                startActivity(new Intent(ShowEvent.this,MainActivity.class));
             }
             return true;
         }
